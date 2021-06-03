@@ -67,7 +67,7 @@ header {
 
 .hero {
     position: relative;
-    background-image: url(/img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 440px;
@@ -96,7 +96,7 @@ header {
         content: " ";
         width: 40px;
         height: 40px;
-        background-image: url(/img/arrow-down.svg);
+        background-image: url(../img/arrow-down.svg);
         background-repeat: no-repeat;
         cursor: pointer;
     }
@@ -177,7 +177,7 @@ section {
     background: #293a7d;
 
     @media (min-width: 1350px) {
-        background: url(/img/students.jpg) #293a7d;
+        background: url(../img/students.jpg) #293a7d;
         background-position: top left;
         background-repeat: no-repeat;
         min-height: 644px;
