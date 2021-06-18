@@ -5,6 +5,7 @@ body {
 }
 
 p > a {
+    background-color: #293a7d;
     color: #fff;
     font-size: 16px;
     font-family: "Work Sans", sans-serif;
@@ -21,6 +22,17 @@ h2 {
     font-family: "Space Mono", monospace;
     font-size: 2rem;
     color: #293a7d;
+}
+
+h3 {
+    font-family: "Space Mono", monospace;
+    font-size: 1.5rem;
+    color: #293a7d;
+
+}
+
+.text {
+    color: 000000;
 }
 
 .grey {
@@ -149,6 +161,44 @@ section {
     }
 }
 
+.row-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+
+    .spot {
+        width: 275px;
+        font-family: "Space Mono", monospace;
+        color: #293a7d;
+        text-align: center;
+        line-height: 150%;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+            margin-right: 4rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 .video {
     display: flex;
     justify-content: center;
@@ -171,6 +221,176 @@ section {
         }
     }
 }
+
+.slider {
+    height: 65vh;
+    position: relative;
+    overflow: hidden;
+    margin: 4rem auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .slider__nav {
+    width: 12px;
+    height: 12px;
+    margin: 0.1rem 12px;
+    border-radius: 50%;
+    z-index: 10;
+    outline: 6px solid #ccc;
+    outline-offset: -6px;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    cursor: pointer;
+    appearance: none;
+    backface-visibility: hidden;
+  }
+
+  .slider__nav:checked {
+   animation: check 0.4s linear forwards;
+  }
+  .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+    left: 0%;
+  }
+  .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+    left: -100%;
+  }
+  .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+    left: -200%;
+  }
+  .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+    left: -300%;
+  }
+  .slider__inner {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .slider__contents {
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider__image {
+    background-image: url(../img/rasmus.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slider__image2 {
+    background-image: url(../img/niels.jpeg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .slider__image3 {
+    background-image: url(../img/markus.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .slider__image4 {
+    background-image: url(../img/vlad.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  i {
+    display: inline;
+    width: 100%;
+    height: auto;
+    margin-left: -50px;
+  }
+
+  .slider__caption {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 2rem 0 1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .slider__txt {
+    font-size: 20px;
+    color: #999;
+    margin-bottom: 3rem;
+    max-width: 300px;
+  }
+  
+  @-webkit-keyframes check {
+    50% {
+      outline-color: #333;
+      box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+    }
+    100% {
+      outline-color: #333;
+      box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+  }
+  
+  @keyframes check {
+    50% {
+      outline-color: #333;
+      box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+    }
+    100% {
+      outline-color: #333;
+      box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+  }
+  
+  
 
 .mentor-form {
     padding: 1rem;
@@ -343,8 +563,71 @@ section {
     }
 }
 
+.row-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 7rem;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+
+    .spot-2 {
+        width: 275px;
+        font-family: "Space Mono", monospace;
+        color: #293a7d;
+        text-align: center;
+        line-height: 90%;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+            margin-right: 4rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 footer {
     background-color: #293a7d;
     color: #fff;
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul li {
+    padding: 0;
+    margin: 0 1rem 0 0;
+}
+
+footer nav ul li:last-child {
+    margin-right: 0;
+}
+
+footer nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
 }
