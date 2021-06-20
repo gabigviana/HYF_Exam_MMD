@@ -12,6 +12,16 @@ p > a {
   text-decoration: none;
 }
 
+.spot-3 a {
+  background-color: #fff;
+  color: #293a7d;
+}
+
+.spot-3 a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 h1 {
   font-family: "Space Mono", monospace;
   font-size: 2.25rem;
